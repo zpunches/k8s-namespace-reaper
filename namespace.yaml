@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: namespace-reaper-test
+  annotations:
+    ttl: "2 hours"
+    nsReaper: "enabled"

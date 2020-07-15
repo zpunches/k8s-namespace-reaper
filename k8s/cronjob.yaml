@@ -1,0 +1,18 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: namespace-reaper
+  namespace: kube-system
+spec:
+  schedule: "0 */1 * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: namespace-reaper
+            image: IMAGE_URL%%
+            imagePullPolicy: Always
+          restartPolicy: Never
+          serviceAccountName: namespace-reaper
+

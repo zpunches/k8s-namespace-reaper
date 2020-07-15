@@ -9,7 +9,7 @@ This tool aims to deliver the same functionality via a script that looks for two
 
 ## Example
 ```YAML
-apiVersion: batch/v1
+apiVersion: v1
 kind: Namespace
 metadata:
   name: example-namespace
